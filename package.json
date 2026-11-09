@@ -1,0 +1,44 @@
+{
+  "name": "ecommerce-microservices-rabbitmq",
+  "version": "1.0.0",
+  "description": "Enterprise-grade E-Commerce Microservices ecosystem demonstrating all RabbitMQ patterns: Direct, Topic, Fanout, Headers, Dead Letter Queues (DLQ), TTL Retry Backoff, Priority Queues, RPC Request-Reply, and Saga Choreography.",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "tsx --test test/**/*.test.ts",
+    "demo": "tsx scenarios/11_ecommerce_saga_orchestration.ts",
+    "scenario:01": "tsx scenarios/01_simple_worker_queue.ts",
+    "scenario:02": "tsx scenarios/02_publish_subscribe_fanout.ts",
+    "scenario:03": "tsx scenarios/03_direct_exchange_routing.ts",
+    "scenario:04": "tsx scenarios/04_topic_exchange_patterns.ts",
+    "scenario:05": "tsx scenarios/05_headers_exchange.ts",
+    "scenario:06": "tsx scenarios/06_rpc_request_reply.ts",
+    "scenario:07": "tsx scenarios/07_publisher_confirms.ts",
+    "scenario:08": "tsx scenarios/08_dead_letter_exchange_dlq.ts",
+    "scenario:09": "tsx scenarios/09_ttl_delayed_retries.ts",
+    "scenario:10": "tsx scenarios/10_priority_queues.ts",
+    "scenario:11": "tsx scenarios/11_ecommerce_saga_orchestration.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "rabbitmq",
+    "microservices",
+    "amqp",
+    "event-driven-architecture",
+    "saga-pattern",
+    "dlq",
+    "message-broker",
+    "ecommerce"
+  ],
+  "author": "Vicky Kumar",
+  "license": "MIT",
+  "dependencies": {
+    "amqplib": "^0.10.4"
+  },
+  "devDependencies": {
+    "@types/amqplib": "^0.10.5",
+    "@types/node": "^20.14.9",
+    "tsx": "^4.19.0",
+    "typescript": "^5.5.3"
+  }
+}
